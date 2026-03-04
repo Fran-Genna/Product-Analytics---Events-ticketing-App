@@ -48,7 +48,7 @@ DROP TABLE ticket_purchased;
 -- DATA CLEANING - EVENTS
 select * from events;
 
--- Valori nulli
+-- Valores nulos
 SELECT 
     COUNT(*) - COUNT(event_id) AS nulli_event_id,
     COUNT(*) - COUNT(city) AS nulli_city,
@@ -59,7 +59,7 @@ FROM events;
 
 
 
--- duplicati
+-- duplicados
 SELECT 
      COUNT(event_id) AS duplicate_event_id
 FROM events
@@ -77,7 +77,7 @@ GROUP BY event_id, city, genre, date
 HAVING COUNT(*) > 1;
 
 
--- Check sulle categorie e valori (oulier o errori grammaticali)
+-- Comprobación de categorías y valores (errores ortográficos o outliers)
 
 -- ciudades
 SELECT 
@@ -137,7 +137,7 @@ HAVING COUNT(*) > 1;
 
 
 
--- Check sulle categorie e valori (oulier o errori grammaticali)
+-- Comprobación de categorías y valores (errores ortográficos o outliers)
 -- device
 SELECT 
       DISTINCT device_type
@@ -396,6 +396,7 @@ select * from events;
 select * from event_page_views;
 select * from ticket_checkout_started;
 select * from ticket_purchased;
+
 
 
 
