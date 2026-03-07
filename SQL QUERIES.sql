@@ -36,10 +36,6 @@ select * from ticket_checkout_started;
 select * from ticket_purchased;
 
 
-DROP TABLE events;
-DROP TABLE event_page_views;
-DROP TABLE ticket_checkout_started;
-DROP TABLE ticket_purchased;
 
 
 
@@ -385,7 +381,7 @@ LEFT JOIN events AS e
 
 
 SELECT * FROM event_funnel;
-DROP VIEW event_funnel;
+
 
 
 
@@ -396,6 +392,7 @@ select * from events;
 select * from event_page_views;
 select * from ticket_checkout_started;
 select * from ticket_purchased;
+
 
 
 
